@@ -18,5 +18,7 @@ def compute_loss(y, tx, w):
     # ***************************************************
     # INSERT YOUR CODE HERE
     # TODO: compute loss by MSE
+    size = y.shape[0]
+    cost_function = (1/(2*size))*(y-tx@w).transpose()@(y-tx@w)
     # ***************************************************
-    raise NotImplementedError
+    return cost_function
