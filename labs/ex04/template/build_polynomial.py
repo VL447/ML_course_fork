@@ -21,6 +21,10 @@ def build_poly(x, degree):
     # ***************************************************
     # COPY YOUR CODE FROM EX03 HERE
     # polynomial basis function: TODO
+    poly = np.ones((len(x), 1))
+    for deg in range(1, degree + 1):
+        poly = np.c_[poly, np.power(x, deg)]
+    return poly
     # this function should return the matrix formed
     # by applying the polynomial basis to the input data
     # ***************************************************
